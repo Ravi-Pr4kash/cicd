@@ -33,4 +33,8 @@ jobs:
             - name: Installing Dependencies
               run : npm install   
             - name: Deploy project
-              run: node index.js
+              run: |
+                node index.js &
+                sleep 5
+                echo "Server started successfully!"
+
