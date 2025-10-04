@@ -10,7 +10,7 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-            - name: Build Project
+            - name: Installing Dependencies
               run: npm install 
               
     test:
@@ -19,6 +19,8 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+            - name: Installing Dependencies
+              run: npm install
             - name: Run tests
               run: echo "testing the project"
 
@@ -28,5 +30,7 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+            - name: Installing Dependencies
+              run : npm install   
             - name: Deploy project
               run: node index.js
