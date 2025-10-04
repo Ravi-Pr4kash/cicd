@@ -17,6 +17,8 @@ jobs:
         needs: build
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
             - name: Run tests
               run: echo "testing the project"
 
@@ -24,5 +26,7 @@ jobs:
         needs: test
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
             - name: Deploy project
               run: node index.js
